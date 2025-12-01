@@ -34,3 +34,36 @@ The MCP server acts as the backend data service, connecting to a database and **
 | **Customer Data Agent** | Calls MCP tools to fetch or update records, validates data, returns structured results |
 | **Support Agent** | Handles customer support logic, can escalate tasks, generates service responses, requests data when needed |
 
+## Installation & Setup
+
+### **1. Clone Repo**
+
+```bash
+git clone https://github.com/ChristinaDong490/Multi-Agent_Customer_Service_System_with_A2A_and_MCP.git
+```
+
+### **2. Install Dependencies**
+
+Python 3.10+ recommended.
+
+```bash
+pip install flask flask-cors requests termcolor pyngrok bitsandbytes -q
+```
+
+### **3. Initialize the SQLite database**
+
+```bash
+python database_setup.py
+```
+
+This creates:
+
+- `customers` table
+- `tickets` table
+- Inserts sample customers & tickets
+
+### **4. Run the MCP Server**
+```bash
+start_server()
+check_server_status()
+```
